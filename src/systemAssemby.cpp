@@ -37,5 +37,7 @@ std::pair<Eigen::SparseMatrix<double> , Eigen::SparseMatrix<double>> SystemAssem
             }
         }
     }
+    M.makeCompressed();
+    K.makeCompressed();
     return {K,M};
 }
